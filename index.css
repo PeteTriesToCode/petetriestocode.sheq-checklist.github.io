@@ -1,266 +1,248 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+/* Global styles */  
+body {  
+    font-family: "Titillium Web", sans-serif;  
+    font-weight: 600;  
+    font-style: normal;  
+    margin: 10px;  
+    padding: 0;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    background-color: #b2b2b2; /* Lighter background color */  
+}  
 
-body {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f5f5f5;
-}
+h1 {  
+    margin: 20px;  
+    font-size: 3rem; /* Increased font size for better readability */  
+    font-weight: bold; /* Added bold font weight for headings */  
+    color: #000000; /* Darker text color for better contrast */  
+}  
 
-h1 {
-    margin: 20px;
-    font-size: 3rem; /* Normal font size for web use */
-}
+label, select, textarea {  
+    font-size: 1.8rem;  
+    font-family: "Titillium Web", sans-serif;  
+    margin-bottom: 15px; /* Increased margin for better spacing */  
+}  
 
-label{
-    font-size: 1.8rem;
-}
+.detail-section {  
+    width: 80%;  
+    max-width: 800px;  
+    margin-bottom: 30px;  
+    border: 1px solid #ddd;  
+    padding: 20px;  
+    background-color: #fff;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: space-around;  
+    align-items: center;  
+}  
 
-select{
-    font-size: 1.2rem;
-}
+#checklist-details {  
+    flex: 1;  
+    width: calc(100% - 20px);  
+    margin: 10px;  
+    background-color: #f7f7f7;  
+    padding: 10px;  
+    border: 1px solid #ddd;  
+    border-radius: 10px;  
+}  
 
-textarea{
-    font-size: 1.2rem;
-}
+.checklist-details {  
+    border: none;  
+    background-color: transparent;  
+    text-align: center;  
+    width: 100%;  
+    height: auto; /* Set height to auto to adjust to content */  
+    font-size: 16px; /* Adjust font size for better readability */  
+    padding: 10px; /* Adjust padding for better spacing */  
+    box-sizing: border-box; /* Include padding in width calculation */  
+}  
 
-.detail-section {
-    width: 80%; /* Adjusted to match .section width */
-    max-width: 700px; /* Limit the width for better readability on larger screens */
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
+.checklist-details::placeholder {  
+    color: #242424;  
+    background-color: transparent;  
+    font-size: 16px;  
+    font-style: italic;  
+    opacity: 1;  
+}  
 
-#company-details, #officer-details {
-    flex: 1;
-    width: calc(80% - 10px); /* Maintain 80% width minus padding */
-    margin: 5px;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+.section,.final-section {  
+    width: 80%;  
+    max-width: 800px; /* Increased max-width for better readability on larger screens */  
+    margin-bottom: 30px; /* Increased margin for better spacing */  
+    padding: 20px; /* Increased padding for better spacing */  
+    background-color: #feffff;  
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);  
+}  
 
-.company-name, .officer-name {
-    border: none;
-    background-color: transparent;
-    text-align: center;
-    width: 100%;
-    height: 30px;
-    font-size: 20px;
-}
+#section-check-label {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 5rem; /* Increased height for better spacing */  
+    padding: 10px;  
+    padding-bottom: 20px;  
+}  
 
-.company-name::placeholder, .officer-name::placeholder {
-    color: #888;
-    background-color: transparent;
-    font-size: 14px;
-    font-style: italic;
-    opacity: 1;
-    font-size: 20px;
-}
+#section-label {  
+    display: inline;  
+    font-size: 2.5rem; /* Increased font size for better readability */  
+}  
 
-.section {
-    width: 80%;
-    max-width: 700px; /* Limit the width for better readability on larger screens */
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+.item {  
+    margin: 20px 0; /* Increased margin for better spacing */  
+    display: flex;  
+    flex-direction: column;  
+    font-size: 1.5rem; /* Increased font size for better readability */  
+    font-family: "Titillium Web", sans-serif;  
+}  
 
-#section-check-label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-}
+.item > select, textarea::placeholder {  
+    font-size: 15px;  
+    padding: 5px;  
+}  
 
-#section-label{
-    display: inline;
-    font-size: 2.5rem;
-}
+.value-select {  
+    padding: 10px; /* Increased padding for better spacing */  
+}  
 
-.section-check {
-    width: 30px; /* Width of the checkbox */
-    height: 30px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
-    vertical-align: middle;
-    position: relative;
-}
+.recommendations {  
+    width: 100%;  
+    box-sizing: border-box;  
+    resize: vertical;  
+    overflow-x: hidden;  
+    height: 100px;
+}  
 
-.item {
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    font-family: "Titillium Web", sans-serif;
-}
+.final-section {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    padding: 20px;  
+}  
 
-label, select, textarea {
-    margin-bottom: 10px;
-    font-family: "Titillium Web", sans-serif;
-}
+.final-recommendations {  
+    max-width: 100%;  
+    box-sizing: border-box;  
+    resize: vertical;  
+    overflow-x: hidden;  
+    height: 100px;
+}  
 
-.value-select {
-    padding: 5px;
-}
+.final-recommendations {  
+    width: 100%;  
+}  
 
-.recommendations {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    resize: vertical;
-}
+.recommendations textarea,.final-recommendations textarea {  
+    width: 100%;  
+    padding: 20px;  
+    margin: 30px;  
+    overflow: auto;  
+    resize: vertical;  
+}  
 
-#result {
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
+/* Media queries for responsive design */  
+@media only screen and (max-width: 1200px) {  
+    h1 {  
+        font-size: 2.5rem;  
+    }  
+    label, select, textarea,.item {  
+        font-size: 1.5rem;  
+    }  
+    .company-name,.officer-name {  
+        font-size: 1.5rem;  
+        height: 25px;  
+    }  
+    .section,.final-section,.detail-section > div {  
+        width: 90%;  
+    }  
+    #section-label {  
+        font-size: 2rem;  
+    }  
+    .final-recommendations {  
+        max-width: 100%;  
+        box-sizing: border-box;  
+        resize: vertical;  
+        overflow-x: hidden;  
+        height: 80px;
+    }  
+    .recommendations textarea,.final-recommendations textarea {  
+        width: 100%;  
+        padding: 20px;  
+        margin: 30px;  
+        overflow: auto;  
+        resize: vertical;  
+        height: 80px;
+    }  
+}  
 
-#status {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.pass {
-    color: green;
-}
-
-.fail {
-    color: red;
-}
-
-@media only screen and (max-width: 1200px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    label,
-    select,
-    textarea,
-    .item {
-        font-size: 1.5rem;
-    }
-
-    .company-name,
-    .officer-name {
-        font-size: 1.5rem;
-        height: 25px;
-    }
-
-    .section,
-    .detail-section > div {
-        width: 90%; 
-    }
-
-    #section-label {
-        font-size: 2rem;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    label,
-    select,
-    textarea,
-    .item {
-        font-size: 1.5rem;
-    }
-
-    .company-name,
-    .officer-name {
-        font-size: 1.5rem;
-        height: 25px;
-    }
-
-    .section,
-    .detail-section > div {
-        width: 90%; 
-    }
-
-    #section-label {
-        font-size: 2rem;
-    }
-}
-
-@media only screen and (max-width: 350px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    label,
-    select,
-    textarea,
-    .item {
-        font-size: 1.2rem;
-    }
-    .company-name,
-    .officer-name {
-        font-size: 1.2rem;
-        height: 20px;
-    }
-
-    .section,
-    .detail-section > div {
-        width: 100%;
-        margin: 0 5px;
-    }
-
-    #section-label {
-        font-size: 2.4rem;
-    }
-
-    #print-button-div {
-        margin: 20px;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    #print-button {
-        padding: 10px 20px;
-        background-color: #0078d4; /* Microsoft blue */
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-size: 2.4rem;
-        cursor: pointer;
-        text-decoration: none;
-    }
-    
-    #print-button:hover {
-        background-color: #005a9e; /* Darker shade of Microsoft blue */
-    }
-}
-
-@media print {
-    @page {
-        margin-left: 0.8in;
-        margin-right: 0.8in;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
+@media only screen and (max-width: 768px) {  
+    h1 {  
+        font-size: 2.5rem;  
+    }  
+    label, select, textarea,.item {  
+        font-size: 1.3rem;  
+    }  
+    .company-name,.officer-name {  
+        font-size: 1.3rem;  
+        height: 20px;  
+    }  
+    .section,.final-section,.detail-section > div {  
+        width: 95%;  
+    }  
+    #section-label {  
+        font-size: 1.8rem;  
+    }  
+    .final-recommendations {  
+        max-width: 100%;  
+        box-sizing: border-box;  
+        resize: vertical;  
+        overflow-x: hidden;  
+        height: 80px;
+    }  
+    .recommendations textarea,.final-recommendations textarea {  
+        width: 100%;  
+        padding: 15px;  
+        margin: 20px;  
+        overflow: auto;  
+        resize: vertical;
+        height: 80px;  
+    }  
+}  
+@media only screen and (max-width: 480px) {  
+    h1 {  
+    font-size: 2rem;  
+    }  
+    label, select, textarea,.item {  
+    font-size: 1.2rem;  
+    }  
+    .company-name,.officer-name {  
+    font-size: 1.2rem;  
+    height: 18px;  
+    }  
+    .section,.final-section,.detail-section > div {  
+    width: 98%;  
+    }  
+    #section-label {  
+    font-size: 1.6rem;  
+    }  
+    .final-recommendations {  
+    max-width: 100%;  
+    box-sizing: border-box;  
+    resize: vertical;  
+    overflow-x: hidden;
+    height: 80px;  
+    }  
+    .recommendations textarea,.final-recommendations textarea {  
+    width: 100%;  
+    padding: 10px;  
+    margin: 15px;  
+    overflow: auto;  
+    resize: vertical;  
+    height: 80px;
+    }  
+}  
 
 #print-button-div {
     margin: 20px;
@@ -280,5 +262,5 @@ label, select, textarea {
 }
 
 #print-button:hover {
-    background-color: #005a9e; /* Darker shade of Microsoft blue */
+    background-color: #01a71f; /* Darker shade of Microsoft blue */
 }
